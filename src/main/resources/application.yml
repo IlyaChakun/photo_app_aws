@@ -1,0 +1,25 @@
+spring:
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: "2KB"
+      max-file-size: "200MB"
+      max-request-size: "215MB"
+  autoconfigure:
+    exclude:
+      - org.springframework.cloud.aws.autoconfigure.messaging.MessagingAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextStackAutoConfiguration
+      - org.springframework.cloud.aws.autoconfigure.context.ContextRegionProviderAutoConfiguration
+
+
+aws:
+  services:
+    bucket: ""
+
+
+cloud:
+  aws:
+    region.static: ""
+    credentials:
+      accessKey: ""
+      secretKey: ""
